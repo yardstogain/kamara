@@ -1,19 +1,108 @@
-const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+const sage = {
+  sage1: "#fbfdfc",
+  sage2: "#f8faf9",
+  sage3: "#f1f4f3",
+  sage4: "#ecefed",
+  sage5: "#e6e9e8",
+  sage6: "#dfe4e2",
+  sage7: "#d7dcda",
+  sage8: "#c2c9c6",
+  sage9: "#8a918e",
+  sage10: "#808784",
+  sage11: "#6a716e",
+  sage12: "#111c18",
+};
+const sageDark = {
+  sage1: "#141716",
+  sage2: "#191d1b",
+  sage3: "#1f2421",
+  sage4: "#252a27",
+  sage5: "#2a2f2c",
+  sage6: "#303633",
+  sage7: "#393f3c",
+  sage8: "#4a524e",
+  sage9: "#66736d",
+  sage10: "#75817b",
+  sage11: "#99a29e",
+  sage12: "#eceeed",
+};
+const green = {
+  green1: "#fbfefc",
+  green2: "#f2fcf5",
+  green3: "#e9f9ee",
+  green4: "#ddf3e4",
+  green5: "#ccebd7",
+  green6: "#b4dfc4",
+  green7: "#92ceac",
+  green8: "#5bb98c",
+  green9: "#30a46c",
+  green10: "#299764",
+  green11: "#18794e",
+  green12: "#153226",
+};
+const greenDark = {
+  green1: "#0d1912",
+  green2: "#0c1f17",
+  green3: "#0f291e",
+  green4: "#113123",
+  green5: "#133929",
+  green6: "#164430",
+  green7: "#1b543a",
+  green8: "#236e4a",
+  green9: "#30a46c",
+  green10: "#3cb179",
+  green11: "#4cc38a",
+  green12: "#e5fbeb",
+};
+const teal = {
+  teal1: "#fafefd",
+  teal2: "#f1fcfa",
+  teal3: "#e7f9f5",
+  teal4: "#d9f3ee",
+  teal5: "#c7ebe5",
+  teal6: "#afdfd7",
+  teal7: "#8dcec3",
+  teal8: "#53b9ab",
+  teal9: "#12a594",
+  teal10: "#0e9888",
+  teal11: "#067a6f",
+  teal12: "#10302b",
+};
+const tealDark = {
+  teal1: "#091915",
+  teal2: "#04201b",
+  teal3: "#062923",
+  teal4: "#07312b",
+  teal5: "#083932",
+  teal6: "#09443c",
+  teal7: "#0b544a",
+  teal8: "#0c6d62",
+  teal9: "#12a594",
+  teal10: "#10b3a3",
+  teal11: "#0ac5b3",
+  teal12: "#e1faf4",
+};
 
-export default {
-  light: {
-    text: '#000',
-    background: '#fff',
-    tint: tintColorLight,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorLight,
+export const Theme = {
+  dark: false,
+  colors: {
+    primary: green.green9,
+    background: sage.sage1,
+    card: sage.sage2,
+    text: sage.sage12,
+    border: sage.sage6,
+    notification: teal.teal9,
   },
-  dark: {
-    text: '#fff',
-    background: '#000',
-    tint: tintColorDark,
-    tabIconDefault: '#ccc',
-    tabIconSelected: tintColorDark,
+};
+
+export const DarkTheme = {
+  dark: true,
+  colors: {
+    primary: greenDark.green9,
+    background: `${sageDark.sage1}`,
+    card: sageDark.sage2,
+    text: sageDark.sage12,
+    border: sageDark.sage6,
+    notification: tealDark.teal9,
   },
 };
