@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
 import { ColorSchemeName, Pressable } from "react-native";
 import useColorScheme from "../hooks/useColorScheme";
-import ModalScreen from "../screens/ModalScreen";
+import FraudInfo from "../screens/FraudInfo";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import Rankings from "../screens/Rankings";
 import FraudPicks from "../screens/FraudPicks";
@@ -45,7 +45,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name="Root"
         component={BottomTabNavigator}
@@ -57,7 +61,7 @@ function RootNavigator() {
         options={{ title: "Oops!" }}
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="Fraud List Info" component={FraudInfo} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -83,8 +87,8 @@ function BottomTabNavigator() {
         name="Rankings"
         component={Rankings}
         options={({ navigation }: RootTabScreenProps<"Rankings">) => ({
-          title: "Rankings",
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+          headerShown: false,
           // headerRight: () => (
           //   <Pressable
           //     onPress={() => navigation.navigate("Modal")}
@@ -106,7 +110,8 @@ function BottomTabNavigator() {
         name="FraudPicks"
         component={FraudPicks}
         options={{
-          title: "Picks",
+          headerShown: false,
+
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="american-football" color={color} />
           ),

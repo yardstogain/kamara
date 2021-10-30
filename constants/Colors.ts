@@ -99,7 +99,7 @@ export const DarkTheme = {
   dark: true,
   colors: {
     primary: greenDark.green9,
-    background: `${sageDark.sage1}`,
+    background: sageDark.sage1,
     card: sageDark.sage2,
     text: sageDark.sage12,
     border: sageDark.sage6,

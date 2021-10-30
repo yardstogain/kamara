@@ -1,8 +1,7 @@
-import * as WebBrowser from "expo-web-browser";
 import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function FraudListInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -14,22 +13,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
           update.
         </Text>
       </View>
-
-      <View style={styles.helpContainer}>
-        <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-          <Text style={styles.helpLinkText}>
-            Tap here if your app doesn't automatically update after making
-            changes
-          </Text>
-        </TouchableOpacity>
-      </View>
     </View>
-  );
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    "https://docs.expo.io/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet"
   );
 }
 

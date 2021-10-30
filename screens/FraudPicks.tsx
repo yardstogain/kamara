@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import EditScreenInfo from "../components/EditScreenInfo";
+import FraudListInfo from "../components/FraudListInfo";
 
 export default function FraudPicks() {
   return (

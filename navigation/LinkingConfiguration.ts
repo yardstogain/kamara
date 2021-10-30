@@ -15,14 +15,19 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
+          Home: {
+            screens: {
+              Home: "one",
+            },
+          },
           Rankings: {
             screens: {
-              Rankings: "one",
+              Rankings: "two",
             },
           },
           FraudPicks: {
             screens: {
-              FraudPicksScreen: "two",
+              FraudPicksScreen: "three",
             },
           },
         },
