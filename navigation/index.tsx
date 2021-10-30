@@ -21,6 +21,7 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import { Theme, DarkTheme } from "../constants/Colors";
+import Home from "../screens/Home";
 
 export default function Navigation({
   colorScheme,
@@ -84,6 +85,14 @@ function BottomTabNavigator() {
       }}
     >
       <BottomTab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: false,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
         name="Rankings"
         component={Rankings}
         options={({ navigation }: RootTabScreenProps<"Rankings">) => ({
@@ -107,11 +116,10 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="FraudPicks"
+        name="Picks"
         component={FraudPicks}
         options={{
           headerShown: false,
-
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="american-football" color={color} />
           ),
